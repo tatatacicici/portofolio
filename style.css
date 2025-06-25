@@ -59,9 +59,20 @@ h2.section-title::after {
 }
 
 /* Tombol Slider Carousel menjadi Putih */
+/* Mengubah warna tombol navigasi carousel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: invert(1) grayscale(100) brightness(200);
+  background-color: var(--primary-color); /* Menggunakan warna biru utama dari tema */
+  border-radius: 50%; /* Membuatnya bulat sempurna */
+  padding: 1.2rem; /* Sedikit padding agar terlihat lebih besar dan rapi */
+  background-size: 50%; /* Ukuran ikon di dalam tombol */
+  transition: background-color 0.3s ease;
+}
+
+/* Efek saat kursor diarahkan ke tombol */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: var(--secondary-color); /* Warna menjadi sedikit lebih terang */
 }
 
 /* Desain Tombol Kustom yang Lebih Keren - Edisi Transparan */

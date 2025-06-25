@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Portofolio | Hussain Tamam Gucci Al Fauzan</title>
+    <title>Hussain Tamam Gucci Al Fauzan</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
@@ -17,7 +17,7 @@
   <body data-bs-spy="scroll" data-bs-target="#navbar">
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#hero">Hussain T. G. Al Fauzan</a>
+        <a class="navbar-brand fw-bold" href="#hero">HussainTamam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,8 +46,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <p class="lead mt-4" style="color: var(--text-light)">
-              Saya adalah mahasiswa informatika dengan minat tinggi pada <strong>Backend Development serta Machine Learning & AI</strong>. Saya mampu membangun sistem backend yang scalable menggunakan Laravel dan merancang RESTful API. Saat
-              ini, saya aktif mendalami bahasa Go, arsitektur microservices, dan menerapkan konsep-konsep machine learning dalam berbagai proyek.
+              Saya adalah mahasiswa Informatika yang memiliki ketertarikan mendalam pada <strong>Backend Development serta Machine Learning & AI</strong>. Saya berpengalaman membangun sistem backend yang scalable menggunakan Laravel dan
+              merancang RESTful API. Saat ini, saya tengah mendalami bahasa Go, arsitektur microservices, serta penerapan konsep machine learning dalam berbagai proyek.
             </p>
           </div>
         </div>
@@ -59,20 +59,37 @@
         <h2 class="section-title text-center">Proyek Unggulan</h2>
         <div id="projectCarousel" class="carousel slide">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
             <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
             <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <div class="card card-project">
-                    <img src="https://via.placeholder.com/600x400/1e1e1e/FFFFFF?text=E-Voting+PEMIRA" class="card-img-top" alt="E-Voting PEMIRA 2024" />
+                    <img src="Img/undraw_real-time-analytics_50za.svg" class="card-img-top" alt="IoT MQTT Go Project" />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title fw-bold">IoT: MQTT Inference System with Go</h5>
+                      <p class="card-text text-white-50">Sistem backend Go yang menghubungkan input dari MQTT, diinferensikan ke Python, lalu disimpan dan ditampilkan secara real-time via MongoDB & WebSocket.</p>
+                      <a href="https://github.com/tatatacicici/iot-mqtt-go" target="_blank" rel="noopener noreferrer" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card card-project">
+                    <img src="/Img/pemira.svg" class="card-img-top" alt="E-Voting PEMIRA 2024" />
                     <div class="card-body d-flex flex-column">
                       <h5 class="card-title fw-bold">Sistem E-Voting PEMIRA 2024</h5>
                       <p class="card-text text-white-50">Mengembangkan backend untuk sistem voting yang aman pada pemilihan mahasiswa di 5 jurusan Politeknik Negeri Semarang.</p>
-                      <a href="#" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                      <a href="https://github.com/tatatacicici/pemira2024" target="_blank" rel="noopener noreferrer" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
                     </div>
                   </div>
                 </div>
@@ -82,11 +99,11 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <div class="card card-project">
-                    <img src="https://via.placeholder.com/600x400/1e1e1e/FFFFFF?text=Sistem+Kependudukan" class="card-img-top" alt="Sistem Informasi Kependudukan" />
+                    <img src="/Img/pbl.png" class="card-img-top" alt="Sistem Informasi Kependudukan" />
                     <div class="card-body d-flex flex-column">
                       <h5 class="card-title fw-bold">Sistem Informasi Kependudukan</h5>
-                      <p class="card-text text-white-50">Membangun platform berbasis Laravel untuk manajemen data kependudukan komprehensif di Tegalsari, Semarang, guna meningkatkan efisiensi bagi pengurus RT/RW.</p>
-                      <a href="#" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                      <p class="card-text text-white-50">Membangun platform Laravel untuk manajemen data kependudukan komprehensif di Tegalsari, Semarang, guna meningkatkan efisiensi bagi pengurus RT/RW.</p>
+                      <a href="https://github.com/terminator791/pbl-sistem-penduduk" target="_blank" rel="noopener noreferrer" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
                     </div>
                   </div>
                 </div>
@@ -96,11 +113,39 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <div class="card card-project">
-                    <img src="https://via.placeholder.com/600x400/1e1e1e/FFFFFF?text=Capstone+Project+ML" class="card-img-top" alt="Capstone Project ML" />
+                    <img src="Img/capstone.png" class="card-img-top" alt="Capstone Project ML" />
                     <div class="card-body d-flex flex-column">
                       <h5 class="card-title fw-bold">Capstone Project: Prediksi Stunting</h5>
-                      <p class="card-text text-white-50">Membangun proyek capstone berbasis tim yang memprediksi kasus stunting menggunakan Neural Network dan TensorFlow, lalu mendeploy hasilnya menggunakan Netlify.</p>
-                      <a href="#" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                      <p class="card-text text-white-50">Proyek akhir dari Coding Camp (DBS x Dicoding) untuk memprediksi kasus stunting menggunakan Neural Network & TensorFlow, dan di-deploy menggunakan Netlify.</p>
+                      <a href="https://github.com/tatatacicici/codingcamp-submission/tree/main/Capstone%20Project" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card card-project">
+                    <img src="Img/pcc-ukm.png" class="card-img-top" alt="Website UKM PCC" />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title fw-bold">Website Profil UKM PCC</h5>
+                      <p class="card-text text-white-50">Berkontribusi dalam mengembangkan website statis untuk profil UKM Polytechnic Computer Club (PCC) periode 2023/2024.</p>
+                      <a href="https://tatatacicici.github.io/ukmpcc/" target="_blank" rel="noopener noreferrer" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card card-project">
+                    <img src="Img/program-dbs-bg.jpg" class="card-img-top" alt="Coding Camp Submission" />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title fw-bold">Submission Coding Camp</h5>
+                      <p class="card-text text-white-50">Kumpulan semua submisi proyek dari program Coding Camp by DBS Foundation x Dicoding pada learning path Machine Learning.</p>
+                      <a href="https://github.com/tatatacicici/codingcamp-submission" target="_blank" rel="noopener noreferrer" class="btn btn-custom mt-auto align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
                     </div>
                   </div>
                 </div>
@@ -124,7 +169,7 @@
           <a href="https://wa.me/6285183094390" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
         <div class="copyright">
-          <p>&copy; 2025 Hussain Tamam Gucci Al Fauzan. Dibuat dengan <i class="bi bi-heart-fill text-danger"></i></p>
+          <p>&copy; 2025 Hussain Tamam Gucci Al Fauzan</p>
         </div>
       </div>
     </footer>
