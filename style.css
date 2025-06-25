@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #3d8bfd;
+  --dark-bg-1: #121212;
+  --dark-bg-2: #1e1e1e;
+  --text-light: #e0e0e0;
+  --text-secondary: #a0a0a0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-1);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+}
+
+/* Efek Navbar Transparan ke Solid */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.4s ease-in-out;
+}
+.navbar.navbar-scrolled {
+  background-color: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+  background: linear-gradient(45deg, rgba(13, 29, 56, 0.7), rgba(28, 11, 48, 0.75)), url("https://source.unsplash.com/random/1600x900/?abstract,space") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+#about {
+  background-color: var(--dark-bg-2);
+}
+
+h2.section-title {
+  font-weight: 700;
+  margin-bottom: 50px;
+  position: relative;
+}
+h2.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Tombol Slider Carousel menjadi Putih */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100) brightness(200);
+}
+
+/* Desain Tombol Kustom yang Lebih Keren - Edisi Transparan */
+.btn-custom {
+  background-color: transparent;
+  border: 2px solid white; /* Garis tepi putih */
+  padding: 10px 25px;
+  font-weight: 500;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out; /* Transisi untuk semua properti */
+}
+.btn-custom:hover {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Efek gradien saat hover */
+  border-color: transparent; /* Hilangkan garis tepi saat hover */
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+}
+
+/* Tombol di dalam card tetap solid */
+.card-project .btn-custom {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border: none;
+}
+
+.card-project {
+  background-color: var(--dark-bg-2);
+  border: 1px solid #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(13, 110, 253, 0.2);
+}
+.card-project .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 220px;
+  object-fit: cover;
+  background-color: #343a40;
+}
+.carousel-item {
+  padding-bottom: 40px;
+}
+
+/* Footer dengan Margin Lebih */
+.footer {
+  background-color: var(--dark-bg-2);
+  padding: 40px 0 20px 0;
+}
+.social-icons a {
+  font-size: 1.8rem;
+  margin: 0 15px;
+  color: var(--text-secondary);
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover {
+  color: var(--primary-color);
+  transform: translateY(-5px);
+}
+.footer .copyright {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
