@@ -110,8 +110,8 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold">IoT: MQTT Inference System</h5>
                 <p class="card-text text-white-50">Sistem backend Go yang menghubungkan MQTT, inferensi ke Python, dan real-time update via WebSocket.</p>
-                <div class="tech-tags mt-auto mb-3"><span class="badge">Go</span><span class="badge">MQTT</span><span class="badge">Python</span><span class="badge">MongoDB</span></div>
-                <a href="https://github.com/tatatacicici/iot-mqtt-go" target="_blank" rel="noopener noreferrer" class="btn btn-custom align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                <div class="tech-tags mt-auto mb-3"><span class="badge">Go</span><span class="badge">MQTT</span><span class="badge">Python</span></div>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal1"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@
                 <h5 class="card-title fw-bold">Sistem E-Voting PEMIRA 2024</h5>
                 <p class="card-text text-white-50">Backend sistem voting aman untuk pemilihan mahasiswa di 5 jurusan Polines.</p>
                 <div class="tech-tags mt-auto mb-3"><span class="badge">Laravel</span><span class="badge">PHP</span><span class="badge">MySQL</span></div>
-                <a href="https://github.com/tatatacicici/pemira2024" target="_blank" rel="noopener noreferrer" class="btn btn-custom align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal2"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@
                 <h5 class="card-title fw-bold">Sistem Informasi Kependudukan</h5>
                 <p class="card-text text-white-50">Platform Laravel untuk manajemen data kependudukan guna efisiensi RT/RW.</p>
                 <div class="tech-tags mt-auto mb-3"><span class="badge">Laravel</span><span class="badge">PHP</span><span class="badge">Bootstrap</span></div>
-                <a href="https://github.com/terminator791/pbl-sistem-penduduk" target="_blank" rel="noopener noreferrer" class="btn btn-custom align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal3"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@
                 <h5 class="card-title fw-bold">Capstone: Prediksi Stunting</h5>
                 <p class="card-text text-white-50">Proyek akhir Coding Camp (DBS x Dicoding) untuk memprediksi stunting menggunakan Neural Network.</p>
                 <div class="tech-tags mt-auto mb-3"><span class="badge">TensorFlow</span><span class="badge">Netlify</span><span class="badge">JS</span></div>
-                <a href="https://github.com/tatatacicici/codingcamp-submission/tree/main/Capstone%20Project" class="btn btn-custom align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal4"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
@@ -154,8 +154,8 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold">Website Profil UKM PCC</h5>
                 <p class="card-text text-white-50">Kontribusi pengembangan website statis profil UKM Polytechnic Computer Club.</p>
-                <div class="tech-tags mt-auto mb-3"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">Bootstrap</span></div>
-                <a href="https://tatatacicici.github.io/ukmpcc/" target="_blank" rel="noopener noreferrer" class="btn btn-custom align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                <div class="tech-tags mt-auto mb-3"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span></div>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal5"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@
                 <h5 class="card-title fw-bold">Submission Coding Camp</h5>
                 <p class="card-text text-white-50">Kumpulan semua submisi proyek dari program Coding Camp Machine Learning path.</p>
                 <div class="tech-tags mt-auto mb-3"><span class="badge">Python</span><span class="badge">Machine Learning</span></div>
-                <a href="https://github.com/tatatacicici/codingcamp-submission" target="_blank" rel="noopener noreferrer" class="btn btn-custom align-self-start"><i class="bi bi-github"></i> Lihat di GitHub</a>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal6"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
@@ -189,7 +189,190 @@
         </div>
       </div>
     </footer>
-
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal1Label">IoT: MQTT Inference System</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="Img/undraw_real-time-analytics_50za.svg" class="img-fluid rounded mb-4" alt="IoT Project Detail" />
+            <h6>Deskripsi Proyek</h6>
+            <p class="text-white-50">
+              Sistem backend lengkap yang dibangun menggunakan Go untuk menerima data dari sensor melalui protokol MQTT. Data yang masuk kemudian diinferensikan secara real-time oleh model Machine Learning yang berjalan di Python. Hasilnya
+              disimpan di MongoDB dan divisualisasikan secara langsung di frontend menggunakan WebSocket.
+            </p>
+            <h6 class="mt-4">Fitur Utama:</h6>
+            <ul class="text-white-50">
+              <li>Integrasi MQTT Broker untuk data streaming.</li>
+              <li>Komunikasi antar-service (Go & Python) melalui gRPC.</li>
+              <li>Penyimpanan data NoSQL dengan MongoDB.</li>
+              <li>Dashboard real-time dengan WebSocket.</li>
+            </ul>
+            <h6 class="mt-4">Teknologi:</h6>
+            <div class="tech-tags"><span class="badge">Go</span><span class="badge">Python</span><span class="badge">MQTT</span><span class="badge">gRPC</span><span class="badge">MongoDB</span><span class="badge">WebSocket</span></div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/tatatacicici/iot-mqtt-go" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
+            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal2Label">Sistem E-Voting PEMIRA 2024</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/Img/pemira.svg" class="img-fluid rounded mb-4" alt="PEMIRA Project Detail" />
+            <h6>Deskripsi Proyek</h6>
+            <p class="text-white-50">
+              Mengembangkan sistem backend yang aman dan andal untuk Pemilihan Raya Mahasiswa (PEMIRA) di 5 jurusan Politeknik Negeri Semarang. Sistem ini menangani otentikasi pemilih, proses voting, hingga rekapitulasi suara yang aman.
+            </p>
+            <h6 class="mt-4">Fitur Utama:</h6>
+            <ul class="text-white-50">
+              <li>Otentikasi pemilih berbasis token (JWT).</li>
+              <li>API untuk manajemen kandidat dan daftar pemilih.</li>
+              <li>Sistem voting "one-person, one-vote" yang aman.</li>
+              <li>Endpoint untuk rekapitulasi hasil suara.</li>
+            </ul>
+            <h6 class="mt-4">Teknologi:</h6>
+            <div class="tech-tags"><span class="badge">Laravel</span><span class="badge">PHP</span><span class="badge">MySQL</span><span class="badge">REST API</span></div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/tatatacicici/pemira2024" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
+            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal3Label">Sistem Informasi Kependudukan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/Img/pbl.png" class="img-fluid rounded mb-4" alt="Sistem Informasi Kependudukan Detail" />
+            <h6>Deskripsi Proyek</h6>
+            <p class="text-white-50">
+              Platform berbasis web yang dibangun dengan Laravel untuk membantu pengurus RT/RW di Tegalsari, Semarang dalam mengelola data kependudukan. Proyek ini bertujuan meningkatkan efisiensi administrasi dan penyajian data yang
+              akurat.
+            </p>
+            <h6 class="mt-4">Fitur Utama:</h6>
+            <ul class="text-white-50">
+              <li>CRUD (Create, Read, Update, Delete) untuk data warga.</li>
+              <li>Manajemen data keluarga (KK) dan anggota keluarga.</li>
+              <li>Fitur pencarian dan filter data warga.</li>
+              <li>Dashboard statistik kependudukan.</li>
+            </ul>
+            <h6 class="mt-4">Teknologi:</h6>
+            <div class="tech-tags"><span class="badge">Laravel</span><span class="badge">PHP</span><span class="badge">MySQL</span><span class="badge">Bootstrap</span></div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/terminator791/pbl-sistem-penduduk" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
+            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="projectModal4" tabindex="-1" aria-labelledby="projectModal4Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal4Label">Capstone Project: Prediksi Stunting</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="Img/capstone.png" class="img-fluid rounded mb-4" alt="Capstone Project Detail" />
+            <h6>Deskripsi Proyek</h6>
+            <p class="text-white-50">
+              Proyek machine learning akhir dari program Coding Camp (DBS x Dicoding). Proyek ini bertujuan untuk membuat model klasifikasi yang dapat memprediksi risiko stunting pada anak berdasarkan fitur-fitur tertentu. Model yang sudah
+              dilatih di-deploy sebagai aplikasi web interaktif.
+            </p>
+            <h6 class="mt-4">Fitur Utama:</h6>
+            <ul class="text-white-50">
+              <li>Preprocessing data stunting.</li>
+              <li>Pembangunan model klasifikasi menggunakan Neural Network dengan TensorFlow.</li>
+              <li>Evaluasi model dan tuning hyperparameter.</li>
+              <li>Deployment model ke platform web menggunakan Netlify.</li>
+            </ul>
+            <h6 class="mt-4">Teknologi:</h6>
+            <div class="tech-tags"><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Pandas</span><span class="badge">Netlify</span></div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/tatatacicici/codingcamp-submission/tree/main/Capstone%20Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
+            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="projectModal5" tabindex="-1" aria-labelledby="projectModal5Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal5Label">Website Profil UKM PCC</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="Img/pcc-ukm.png" class="img-fluid rounded mb-4" alt="Website UKM PCC Detail" />
+            <h6>Deskripsi Proyek</h6>
+            <p class="text-white-50">
+              Berkontribusi dalam pengembangan dan perancangan website statis untuk profil Unit Kegiatan Mahasiswa (UKM) Polytechnic Computer Club (PCC) periode 2023/2024. Website ini bertujuan sebagai pusat informasi mengenai UKM PCC.
+            </p>
+            <h6 class="mt-4">Fitur Utama:</h6>
+            <ul class="text-white-50">
+              <li>Halaman profil dan sejarah UKM.</li>
+              <li>Galeri kegiatan.</li>
+              <li>Informasi divisi dan kepengurusan.</li>
+              <li>Desain responsif untuk berbagai perangkat.</li>
+            </ul>
+            <h6 class="mt-4">Teknologi:</h6>
+            <div class="tech-tags"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">Bootstrap</span></div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://tatatacicici.github.io/ukmpcc/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
+            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModal6Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModal6Label">Submission Coding Camp</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="Img/program-dbs-bg.jpg" class="img-fluid rounded mb-4" alt="Coding Camp Submission Detail" />
+            <h6>Deskripsi Proyek</h6>
+            <p class="text-white-50">
+              Repositori ini adalah kumpulan semua submisi proyek yang dikerjakan selama mengikuti program Coding Camp by DBS Foundation x Dicoding pada learning path Machine Learning. Mencakup berbagai macam model dan teknik ML.
+            </p>
+            <h6 class="mt-4">Fitur Utama:</h6>
+            <ul class="text-white-50">
+              <li>Proyek klasifikasi gambar.</li>
+              <li>Proyek Natural Language Processing (NLP).</li>
+              <li>Proyek time-series forecasting.</li>
+              <li>Implementasi berbagai arsitektur model ML.</li>
+            </ul>
+            <h6 class="mt-4">Teknologi:</h6>
+            <div class="tech-tags"><span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Pandas</span></div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/tatatacicici/codingcamp-submission" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
+            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" id="back-to-top" class="btn btn-custom"><i class="bi bi-arrow-up"></i></a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -219,6 +402,18 @@
         backDelay: 1500,
         loop: true,
       });
+
+      // Back to Top Button Logic
+      const backToTopButton = document.getElementById("back-to-top");
+      if (backToTopButton) {
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            backToTopButton.style.display = "block";
+          } else {
+            backToTopButton.style.display = "none";
+          }
+        });
+      }
     </script>
   </body>
 </html>

@@ -15,6 +15,11 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Padding atas untuk konten di bawah navbar fixed */
+#hero {
+  padding-top: 70px;
+}
+
 /* Efek Navbar Transparan ke Solid */
 .navbar {
   background-color: transparent;
@@ -33,24 +38,23 @@ body {
 }
 
 .hero {
-  background: linear-gradient(45deg, rgba(13, 29, 56, 0.7), rgba(28, 11, 48, 0.75)), url("https://source.unsplash.com/random/1600x900/?abstract,space") no-repeat center center;
+  background: linear-gradient(45deg, rgba(13, 29, 56, 0.8), rgba(28, 11, 48, 0.85)), url("https://source.unsplash.com/random/1600x900/?abstract,space") no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;
 }
-/* Style untuk efek mengetik agar tingginya stabil */
 #typed-text {
-  min-height: 2.2rem; /* Sesuaikan nilainya agar pas dengan font-size */
+  min-height: 2.2rem;
 }
 
 .section-padding {
   padding: 100px 0;
 }
 #about,
-#skills {
-  /* Menggunakan background yang sama */
+#skills,
+#experience {
   background-color: var(--dark-bg-2);
 }
 
@@ -84,8 +88,8 @@ h2.section-title::after {
 .btn-custom:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+  color: white;
 }
-/* Tombol Outline Baru */
 .btn-outline-custom {
   background-color: transparent;
   border: 2px solid white;
@@ -102,13 +106,52 @@ h2.section-title::after {
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* --- Bagian Keahlian Baru --- */
+/* --- Timeline --- */
+.timeline {
+  position: relative;
+  padding-left: 4rem;
+  border-left: 2px solid var(--border-color);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-dot {
+  position: absolute;
+  left: -4.5rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--dark-bg-1);
+  border: 3px solid var(--primary-color);
+}
+.timeline-date {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+.timeline-content {
+  background-color: var(--dark-bg-1);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+.timeline-content h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* --- Keahlian --- */
 .skill-card {
   background-color: var(--dark-bg-1);
   padding: 30px;
   border-radius: 15px;
   border: 1px solid var(--border-color);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   height: 100%;
 }
 .skill-card:hover {
@@ -121,7 +164,7 @@ h2.section-title::after {
   color: var(--primary-color);
 }
 
-/* --- Kartu Proyek yang Ditingkatkan --- */
+/* --- Kartu Proyek --- */
 .card-project {
   background-color: var(--dark-bg-2);
   border: 1px solid var(--border-color);
@@ -141,22 +184,32 @@ h2.section-title::after {
   object-fit: cover;
   background-color: #343a40;
 }
-
-/* Tag Teknologi di Proyek */
 .tech-tags .badge {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--text-light);
   font-weight: 400;
   padding: 0.4em 0.7em;
   margin-right: 5px;
-  margin-bottom: 5px; /* jika pindah baris */
+  margin-bottom: 5px;
 }
 
-/* Footer */
+/* --- Footer & Kontak --- */
 .footer {
-  background-color: var(--dark-bg-2);
+  background-color: var(--dark-bg-1); /* Sama dengan skill card */
   padding: 80px 0 20px 0;
   border-top: 1px solid var(--border-color);
+}
+.form-control {
+  background-color: var(--dark-bg-2);
+  border: 1px solid var(--border-color);
+  padding: 12px 15px;
+  color: var(--text-light);
+}
+.form-control:focus {
+  background-color: var(--dark-bg-2);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .social-icons a {
   font-size: 1.8rem;
@@ -172,4 +225,30 @@ h2.section-title::after {
   margin-top: 30px;
   font-size: 0.9rem;
   color: var(--text-secondary);
+}
+
+/* --- Modal Proyek --- */
+.modal-content {
+  background-color: var(--dark-bg-2);
+  border: 1px solid var(--border-color);
+}
+.modal-header,
+.modal-footer {
+  border-color: var(--border-color);
+}
+
+/* --- Tombol Back to Top --- */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 50px;
+  text-align: center;
 }
