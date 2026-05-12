@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Hussain Tamam Gucci Al Fauzan | Backend & AI Portfolio</title>
-    <meta name="description" content="Portofolio Hussain Tamam, seorang Backend Developer dan Penggiat Machine Learning & AI. Lihat proyek-proyek saya di Laravel, Go, dan TensorFlow." />
-    <meta property="og:title" content="Hussain Tamam Gucci Al Fauzan | Portfolio" />
-    <meta property="og:description" content="Backend Development & Machine Learning Projects" />
+    <title>Hussain Tamam Gucci Al Fauzan | Odoo Developer & Backend Engineer</title>
+    <meta name="description" content="Portofolio Hussain Tamam, seorang Odoo Developer, Backend Engineer, dan Penggiat Machine Learning & AI. Lihat proyek-proyek saya di Odoo, Laravel, Go, dan Python." />
+    <meta property="og:title" content="Hussain Tamam Gucci Al Fauzan | Odoo & Backend Portfolio" />
+    <meta property="og:description" content="Odoo Development, Backend Engineering & Machine Learning Projects" />
     <meta property="og:image" content="https://source.unsplash.com/random/1200x630/?technology,code" />
     <meta property="og:url" content="https://tatatacicici.github.io/portfolio/" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -16,11 +16,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbar">
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#hero">HussainTamam</a>
@@ -40,7 +44,8 @@
     </nav>
 
     <section id="hero" class="hero">
-      <div class="container">
+      <div id="particles-js"></div>
+      <div class="container position-relative" style="z-index: 2;">
         <h1 class="display-4 fw-bold" data-aos="fade-down">Hussain Tamam Gucci Al Fauzan</h1>
         <p class="lead mt-3 text-light-50" data-aos="fade-up" data-aos-delay="200"><span id="typed-text"></span></p>
         <div class="mt-4" data-aos="fade-up" data-aos-delay="400">
@@ -50,15 +55,51 @@
       </div>
     </section>
 
-    <section id="about" class="section-padding">
+    <section id="about" class="section-padding position-relative">
       <div class="container" data-aos="fade-up">
         <h2 class="section-title text-center">Tentang Saya</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <p class="lead mt-4" style="color: var(--text-light)">
-              Saya adalah mahasiswa Informatika yang memiliki ketertarikan mendalam pada <strong>Backend Development serta Machine Learning & AI</strong>. Saya berpengalaman membangun sistem backend yang scalable menggunakan Laravel dan
-              merancang RESTful API. Saat ini, saya tengah mendalami bahasa Go, arsitektur microservices, serta penerapan konsep machine learning dalam berbagai proyek.
+        <div class="row align-items-center mt-5 gy-5">
+          <div class="col-lg-6">
+            <h3 class="fw-bold mb-4" style="color: var(--primary-color);">Architecting Business Solutions</h3>
+            <p class="lead" style="color: var(--text-light); font-size: 1.1rem; line-height: 1.8;">
+              Saya adalah seorang <strong>Odoo Developer & Backend Engineer</strong> dengan passion mendalam pada arsitektur sistem dan otomasi bisnis. Saya berpengalaman membangun modul dan merancang sistem ERP dengan Odoo, serta membuat sistem backend <i>scalable</i> menggunakan Laravel dan Go. 
             </p>
+            <p class="lead mt-3" style="color: var(--text-light); font-size: 1.1rem; line-height: 1.8;">
+              Selain itu, saya juga menaruh minat besar pada <strong>Machine Learning & AI</strong>, dan terus mengeksplorasi cara mengintegrasikan kecerdasan buatan ke dalam solusi bisnis Enterprise yang saya bangun.
+            </p>
+            <div class="mt-4">
+              <a href="#projects" class="btn btn-custom">Lihat Karya Saya</a>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <!-- Interactive IDE Mockup -->
+            <div class="ide-mockup" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+              <div class="ide-header">
+                <div class="ide-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="ide-title">models.py — Odoo Portfolio</div>
+              </div>
+              <div class="ide-body">
+                <pre><code class="language-python">from odoo import models, fields, api
+
+class Portfolio(models.Model):
+    _name = 'hussain.portfolio'
+    _description = 'Odoo Developer Profile'
+
+    name = fields.Char(default='Hussain Tamam')
+    role = fields.Char(default='Backend & ERP Engineer')
+    skills = fields.Selection([
+        ('odoo', 'Odoo Framework'),
+        ('go', 'Go (Golang)'),
+        ('ml', 'Machine Learning')
+    ])
+    
+    <span id="ide-typed"></span><span class="ide-cursor">|</span>
+</code></pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -66,34 +107,48 @@
 
     <section id="skills" class="section-padding">
       <div class="container" data-aos="fade-up">
-        <h2 class="section-title text-center">Keahlian Teknisi</h2>
-        <div class="row text-center mt-5 gy-4">
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-card">
-              <i class="bi bi-server skill-icon"></i>
-              <h5 class="fw-bold mt-3">Backend</h5>
-              <p class="text-white-50">Go, PHP, Laravel, RESTful API, Python</p>
+        <h2 class="section-title text-center">Keahlian Teknis</h2>
+        <div class="bento-grid bento-skills mt-5">
+          <!-- Odoo Skill (Large Card) -->
+          <div class="bento-card bento-skill-large" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="100">
+            <div class="bento-icon large-icon"><i class="bi bi-box-seam"></i></div>
+            <h4 class="fw-bold mt-2">Odoo & ERP System</h4>
+            <p class="text-white-50 mt-3" style="flex-grow: 1;">Berpengalaman merancang, memodifikasi, dan mengintegrasikan modul Odoo untuk memenuhi kebutuhan bisnis <i>Enterprise</i>. Menguasai arsitektur MVC Odoo, ORM, QWeb, dan XML Views untuk menciptakan solusi ERP yang efisien.</p>
+            <div class="tech-tags mt-auto pt-3 border-top" style="border-color: var(--border-color) !important;">
+              <span class="badge">Odoo 14-17</span>
+              <span class="badge">Python</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">XML</span>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="skill-card">
-              <i class="bi bi-robot skill-icon"></i>
-              <h5 class="fw-bold mt-3">Machine Learning</h5>
-              <p class="text-white-50">TensorFlow, Scikit-learn, Pandas, NumPy</p>
+          
+          <!-- Backend Skill (Wide Card) -->
+          <div class="bento-card bento-skill-wide" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="200">
+            <div class="bento-icon"><i class="bi bi-server"></i></div>
+            <h5 class="fw-bold">Backend & API</h5>
+            <p class="text-white-50 mt-2" style="flex-grow: 1;">Membangun arsitektur microservices dan RESTful API berkinerja tinggi yang aman dan <i>scalable</i>.</p>
+            <div class="tech-tags mt-auto">
+              <span class="badge">Go</span><span class="badge">Laravel</span><span class="badge">PHP</span><span class="badge">REST API</span>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="skill-card">
-              <i class="bi bi-database-fill-gear skill-icon"></i>
-              <h5 class="fw-bold mt-3">Database</h5>
-              <p class="text-white-50">MySQL, MongoDB</p>
+
+          <!-- ML Skill -->
+          <div class="bento-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="300">
+            <div class="bento-icon"><i class="bi bi-robot"></i></div>
+            <h5 class="fw-bold">Machine Learning</h5>
+            <p class="text-white-50 mt-2 small" style="flex-grow: 1;">Klasifikasi & NLP.</p>
+            <div class="tech-tags mt-auto">
+              <span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-            <div class="skill-card">
-              <i class="bi bi-tools skill-icon"></i>
-              <h5 class="fw-bold mt-3">Tools & Lainnya</h5>
-              <p class="text-white-50">Git, Docker, MQTT, WebSocket, Netlify</p>
+
+          <!-- Tools Skill -->
+          <div class="bento-card" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="400">
+            <div class="bento-icon"><i class="bi bi-tools"></i></div>
+            <h5 class="fw-bold">Tools & DevOps</h5>
+            <p class="text-white-50 mt-2 small" style="flex-grow: 1;">Infrastruktur & Versioning.</p>
+            <div class="tech-tags mt-auto">
+              <span class="badge">Docker</span><span class="badge">Git</span><span class="badge">Linux</span>
             </div>
           </div>
         </div>
@@ -105,19 +160,23 @@
         <h2 class="section-title text-center" data-aos="fade-up">Proyek Unggulan</h2>
         <div class="row g-4 mt-4">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card card-project h-100">
-              <img src="Img/undraw_real-time-analytics_50za.svg" class="card-img-top" alt="IoT MQTT Go Project" />
+            <div class="card card-project h-100" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2">
+              <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Odoo ERP Development" />
+              </div>
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title fw-bold">IoT: MQTT Inference System</h5>
-                <p class="card-text text-white-50">Sistem backend Go yang menghubungkan MQTT, inferensi ke Python, dan real-time update via WebSocket.</p>
-                <div class="tech-tags mt-auto mb-3"><span class="badge">Go</span><span class="badge">MQTT</span><span class="badge">Python</span></div>
-                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal1"><i class="bi bi-search"></i> Lihat Detail</button>
+                <h5 class="card-title fw-bold">Odoo Custom Modules</h5>
+                <p class="card-text text-white-50">Kumpulan pengembangan dan modifikasi modul Odoo ERP tingkat lanjut untuk mengotomatisasi proses bisnis.</p>
+                <div class="tech-tags mt-auto mb-3"><span class="badge">Odoo</span><span class="badge">Python</span><span class="badge">XML</span><span class="badge">PostgreSQL</span></div>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModalOdoo"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card card-project h-100">
-              <img src="/Img/pemira.svg" class="card-img-top" alt="E-Voting PEMIRA 2024" />
+              <div class="img-wrapper">
+                <img src="/Img/pemira.svg" class="card-img-top" alt="E-Voting PEMIRA 2024" />
+              </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold">Sistem E-Voting PEMIRA 2024</h5>
                 <p class="card-text text-white-50">Backend sistem voting aman untuk pemilihan mahasiswa di 5 jurusan Polines.</p>
@@ -128,7 +187,9 @@
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card card-project h-100">
-              <img src="/Img/pbl.png" class="card-img-top" alt="Sistem Informasi Kependudukan" />
+              <div class="img-wrapper">
+                <img src="/Img/pbl.png" class="card-img-top" alt="Sistem Informasi Kependudukan" />
+              </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold">Sistem Informasi Kependudukan</h5>
                 <p class="card-text text-white-50">Platform Laravel untuk manajemen data kependudukan guna efisiensi RT/RW.</p>
@@ -138,8 +199,10 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card card-project h-100">
-              <img src="Img/capstone.png" class="card-img-top" alt="Capstone Project ML" />
+            <div class="card card-project h-100" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2">
+              <div class="img-wrapper">
+                <img src="Img/capstone.png" class="card-img-top" alt="Capstone Project ML" />
+              </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold">Capstone: Prediksi Stunting</h5>
                 <p class="card-text text-white-50">Proyek akhir Coding Camp (DBS x Dicoding) untuk memprediksi stunting menggunakan Neural Network.</p>
@@ -150,7 +213,9 @@
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card card-project h-100">
-              <img src="Img/pcc-ukm.png" class="card-img-top" alt="Website UKM PCC" />
+              <div class="img-wrapper">
+                <img src="Img/pcc-ukm.png" class="card-img-top" alt="Website UKM PCC" />
+              </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold">Website Profil UKM PCC</h5>
                 <p class="card-text text-white-50">Kontribusi pengembangan website statis profil UKM Polytechnic Computer Club.</p>
@@ -160,13 +225,15 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card card-project h-100">
-              <img src="Img/program-dbs-bg.jpg" class="card-img-top" alt="Coding Camp Submission" />
+            <div class="card card-project h-100" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2">
+              <div class="img-wrapper">
+                <img src="Img/undraw_real-time-analytics_50za.svg" class="card-img-top" alt="IoT MQTT Go Project" />
+              </div>
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title fw-bold">Submission Coding Camp</h5>
-                <p class="card-text text-white-50">Kumpulan semua submisi proyek dari program Coding Camp Machine Learning path.</p>
-                <div class="tech-tags mt-auto mb-3"><span class="badge">Python</span><span class="badge">Machine Learning</span></div>
-                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal6"><i class="bi bi-search"></i> Lihat Detail</button>
+                <h5 class="card-title fw-bold">IoT: MQTT Inference System</h5>
+                <p class="card-text text-white-50">Sistem backend Go yang menghubungkan MQTT, inferensi ke Python, dan real-time update via WebSocket.</p>
+                <div class="tech-tags mt-auto mb-3"><span class="badge">Go</span><span class="badge">MQTT</span><span class="badge">Python</span></div>
+                <button class="btn btn-custom align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal1"><i class="bi bi-search"></i> Lihat Detail</button>
               </div>
             </div>
           </div>
@@ -244,8 +311,9 @@
             <div class="tech-tags"><span class="badge">Laravel</span><span class="badge">PHP</span><span class="badge">MySQL</span><span class="badge">REST API</span></div>
           </div>
           <div class="modal-footer">
-            <a href="https://github.com/tatatacicici/pemira2024" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
-            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <a href="pemira-api.html" target="_blank" rel="noopener noreferrer" class="btn btn-custom"><i class="bi bi-file-earmark-code"></i> Dokumentasi API</a>
+            <a href="https://github.com/tatatacicici/pemira2024" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom"><i class="bi bi-github"></i> Kode Sumber</a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
           </div>
         </div>
       </div>
@@ -275,8 +343,9 @@
             <div class="tech-tags"><span class="badge">Laravel</span><span class="badge">PHP</span><span class="badge">MySQL</span><span class="badge">Bootstrap</span></div>
           </div>
           <div class="modal-footer">
-            <a href="https://github.com/terminator791/pbl-sistem-penduduk" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
-            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <a href="sipenduduk-api.html" target="_blank" rel="noopener noreferrer" class="btn btn-custom"><i class="bi bi-file-earmark-code"></i> Dokumentasi API</a>
+            <a href="https://github.com/terminator791/pbl-sistem-penduduk" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom"><i class="bi bi-github"></i> Kode Sumber</a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
           </div>
         </div>
       </div>
@@ -306,8 +375,11 @@
             <div class="tech-tags"><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Pandas</span><span class="badge">Netlify</span></div>
           </div>
           <div class="modal-footer">
-            <a href="https://github.com/tatatacicici/codingcamp-submission/tree/main/Capstone%20Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
-            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <a href="https://colab.research.google.com/github/tatatacicici/codingcamp-submission/blob/main/Capstone%20Project/modelstunting.ipynb" target="_blank" rel="noopener noreferrer" class="btn btn-custom">
+              <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="height: 20px; vertical-align: middle; margin-right: 4px;"> Buka di Colab
+            </a>
+            <a href="https://github.com/tatatacicici/codingcamp-submission/tree/main/Capstone%20Project" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom"><i class="bi bi-github"></i> Kode Sumber</a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
           </div>
         </div>
       </div>
@@ -342,32 +414,32 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModal6Label" aria-hidden="true">
+    <div class="modal fade" id="projectModalOdoo" tabindex="-1" aria-labelledby="projectModalOdooLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModal6Label">Submission Coding Camp</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content" style="background: rgba(16, 20, 24, 0.95); backdrop-filter: blur(20px); border: 1px solid var(--border-color);">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title fw-bold" id="projectModalOdooLabel" style="color: var(--primary-color);">Odoo Custom Modules & Architecture</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <img src="Img/program-dbs-bg.jpg" class="img-fluid rounded mb-4" alt="Coding Camp Submission Detail" />
-            <h6>Deskripsi Proyek</h6>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-4" style="box-shadow: 0 10px 30px rgba(0,242,254,0.1);" alt="Odoo Project Detail" />
+            <h6 class="fw-bold">Deskripsi Proyek</h6>
             <p class="text-white-50">
-              Repositori ini adalah kumpulan semua submisi proyek yang dikerjakan selama mengikuti program Coding Camp by DBS Foundation x Dicoding pada learning path Machine Learning. Mencakup berbagai macam model dan teknik ML.
+              Repositori portofolio ini berisi berbagai kumpulan modul kustom Odoo yang dirancang untuk mengatasi masalah bisnis spesifik. Mulai dari penyesuaian tampilan (QWeb Views), pembuatan model baru, manipulasi ORM tingkat lanjut, hingga otomasi alur kerja (Workflows) dan API Integration.
             </p>
-            <h6 class="mt-4">Fitur Utama:</h6>
+            <h6 class="mt-4 fw-bold">Fitur & Fokus Pengembangan:</h6>
             <ul class="text-white-50">
-              <li>Proyek klasifikasi gambar.</li>
-              <li>Proyek Natural Language Processing (NLP).</li>
-              <li>Proyek time-series forecasting.</li>
-              <li>Implementasi berbagai arsitektur model ML.</li>
+              <li>Customisasi modul inti (Sales, Inventory, Invoicing).</li>
+              <li>Pengembangan report menggunakan QWeb & PDF.</li>
+              <li>Implementasi business logic via Python ORM (compute fields, onchange, constraints).</li>
+              <li>Mendesain interface (XML Views & Actions).</li>
             </ul>
-            <h6 class="mt-4">Teknologi:</h6>
-            <div class="tech-tags"><span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Scikit-learn</span><span class="badge">Pandas</span></div>
+            <h6 class="mt-4 fw-bold">Teknologi:</h6>
+            <div class="tech-tags"><span class="badge">Odoo Framework</span><span class="badge">Python</span><span class="badge">XML / QWeb</span><span class="badge">PostgreSQL</span></div>
           </div>
-          <div class="modal-footer">
-            <a href="https://github.com/tatatacicici/codingcamp-submission" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github"></i> Kode Sumber</a
-            ><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <div class="modal-footer border-top-0">
+            <a href="https://github.com/tatatacicici/odoo-repo-porto" target="_blank" rel="noopener noreferrer" class="btn btn-custom"><i class="bi bi-github"></i> Kode Sumber</a>
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Tutup</button>
           </div>
         </div>
       </div>
@@ -376,8 +448,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
     <script>
+      // Particles.js Init
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 60, density: { enable: true, value_area: 800 } },
+          color: { value: "#00f2fe" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: { enable: true, distance: 150, color: "#4facfe", opacity: 0.4, width: 1 },
+          move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+          modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+      });
+
+      // Custom Cursor
+      const cursor = document.getElementById('custom-cursor');
+      const follower = document.getElementById('custom-cursor-follower');
+      
+      document.addEventListener('mousemove', e => {
+        cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+        follower.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+      });
+
+      const hoverElements = document.querySelectorAll('a, button, .bento-card, .card-project');
+      hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.classList.add('cursor-hover');
+          follower.classList.add('follower-hover');
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.classList.remove('cursor-hover');
+          follower.classList.remove('follower-hover');
+        });
+      });
+
       // Navbar Scroll Effect
       const navbar = document.getElementById("navbar");
       window.onscroll = function () {
@@ -396,11 +510,18 @@
 
       // Typed.js Initialization
       var typed = new Typed("#typed-text", {
-        strings: ["Backend Development Enthusiast", "Machine Learning & AI Explorer", "Passionate Problem Solver"],
+        strings: ["Odoo Developer & ERP Specialist", "Backend Engineer (Go, Python, PHP)", "Machine Learning & AI Enthusiast"],
         typeSpeed: 50,
         backSpeed: 25,
         backDelay: 1500,
         loop: true,
+      });
+
+      var typedIde = new Typed("#ide-typed", {
+        strings: ["@api.depends('role')\n    def _compute_expertise(self):\n        return 'Enterprise Architecture'"],
+        typeSpeed: 40,
+        startDelay: 1000,
+        showCursor: false,
       });
 
       // Back to Top Button Logic

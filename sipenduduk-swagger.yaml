@@ -1,0 +1,253 @@
+openapi: 3.0.0
+info:
+  title: Sistem Informasi Kependudukan RW13 Tegalsari API
+  description: >
+    API documentation for the Population Information System of RW13 Tegalsari, Semarang City.
+    This system facilitates population data management including residents' personal data, 
+    educational background, social assistance, disaster reporting, health condition histories, 
+    and boarding house/rental property management. This documentation focuses on the backend 
+    API developed using Laravel, particularly the authentication and RT leader reporting features.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000/api
+    description: Local Development Server
+tags:
+  - name: Authentication
+    description: User authentication and session management
+  - name: RT Management
+    description: Data recording and reporting features for RT Leaders
+paths:
+  /auth/login:
+    post:
+      summary: User Login
+      description: Authenticate a user (RT Leader, Admin, etc.) and return an access token.
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: rt01@tegalsari.id
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                    example: "1|laravel_sanctum_token_xyz"
+                  token_type:
+                    type: string
+                    example: "Bearer"
+        '401':
+          description: Unauthorized - Invalid credentials
+  /auth/logout:
+    post:
+      summary: User Logout
+      description: Invalidate the current user's access token.
+      tags:
+        - Authentication
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successfully logged out
+        '401':
+          description: Unauthorized
+  /rt/residents:
+    get:
+      summary: Get Residents List
+      description: Retrieve a list of residents managed by the authenticated RT Leader.
+      tags:
+        - RT Management
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+            default: 1
+          description: Page number for pagination
+        - in: query
+          name: search
+          schema:
+            type: string
+          description: Search by name or NIK
+      responses:
+        '200':
+          description: A list of residents
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Resident'
+                  meta:
+                    $ref: '#/components/schemas/PaginationMeta'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden - Requires RT Leader role
+    post:
+      summary: Record New Resident
+      description: Add a new resident's data into the system.
+      tags:
+        - RT Management
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResidentInput'
+      responses:
+        '201':
+          description: Resident created successfully
+        '400':
+          description: Validation error
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+  /rt/reports/health:
+    get:
+      summary: Health Condition Report
+      description: Retrieve a report of residents with specific health conditions in the RT.
+      tags:
+        - RT Management
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Health condition report data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    condition:
+                      type: string
+                      example: "Hypertension"
+                    resident_count:
+                      type: integer
+                      example: 12
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+  /rt/reports/social-assistance:
+    get:
+      summary: Social Assistance Recipients Report
+      description: Retrieve a report of residents receiving social assistance.
+      tags:
+        - RT Management
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Social assistance report
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    assistance_type:
+                      type: string
+                      example: "BLT"
+                    recipients_count:
+                      type: integer
+                      example: 5
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Resident:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        nik:
+          type: string
+          example: "3374112233445566"
+        name:
+          type: string
+          example: "Budi Santoso"
+        address:
+          type: string
+          example: "Jl. Tegalsari Raya No. 10"
+        education:
+          type: string
+          example: "S1"
+        is_tenant:
+          type: boolean
+          example: false
+        created_at:
+          type: string
+          format: date-time
+    ResidentInput:
+      type: object
+      required:
+        - nik
+        - name
+        - address
+      properties:
+        nik:
+          type: string
+          example: "3374112233445566"
+        name:
+          type: string
+          example: "Budi Santoso"
+        address:
+          type: string
+          example: "Jl. Tegalsari Raya No. 10"
+        education:
+          type: string
+          example: "S1"
+        is_tenant:
+          type: boolean
+          example: false
+    PaginationMeta:
+      type: object
+      properties:
+        current_page:
+          type: integer
+          example: 1
+        last_page:
+          type: integer
+          example: 5
+        total:
+          type: integer
+          example: 50
