@@ -1,147 +1,364 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hussain@portfolio: ~</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Hussain Tamam — Backend Developer</title>
+    <meta name="description" content="Hussain Tamam Gucci Al Fauzan — Backend Developer and Machine Learning Enthusiast. Portfolio.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Intro -->
-        <div class="line">
-            <span class="prompt"><span class="user">guest</span><span class="at">@</span><span class="host">hussain-portfolio</span><span class="colon">:</span><span class="dir">~</span><span class="symbol">$</span></span>
-            <span class="command">whoami</span>
-        </div>
-        <div class="output">
-            <h1>HUSSAIN TAMAM</h1>
-            <p>> Backend Developer | Machine Learning Enthusiast</p>
-            <p>> <a href="mailto:hussaintamamgucci@gmail.com">hussaintamamgucci@gmail.com</a></p>
-            <br>
-            <p>Type <span class="highlight">'help'</span> to see available commands, or just scroll down to explore.</p>
-        </div>
 
-        <!-- Download CV -->
-        <div class="line">
-            <span class="prompt"><span class="user">guest</span><span class="at">@</span><span class="host">hussain-portfolio</span><span class="colon">:</span><span class="dir">~</span><span class="symbol">$</span></span>
-            <span class="command">wget https://hussain.dev/cv.pdf</span>
-        </div>
-        <div class="output">
-            <p>--2026-06-27 23:45:00--  https://hussain.dev/cv.pdf</p>
-            <p>Resolving hussain.dev... 192.168.1.1</p>
-            <p>Connecting to hussain.dev|192.168.1.1|:443... connected.</p>
-            <p>HTTP request sent, awaiting response... 200 OK</p>
-            <p>Length: 102400 (100K) [application/pdf]</p>
-            <p>Saving to: 'cv.pdf'</p>
-            <p><a href="https://drive.google.com/file/d/1HlxLKtLSS21bbhPppKKFyuZxhDH6x1YQ/view?usp=drive_link" target="_blank">[Click here to open cv.pdf]</a></p>
-        </div>
+    <!-- Timeline Dots -->
+    <nav class="timeline-dots" id="timelineDots" aria-label="Section navigation">
+        <a href="#hero" class="timeline-dot active" data-section="hero" aria-label="Hero"></a>
+        <a href="#about" class="timeline-dot" data-section="about" aria-label="About"></a>
+        <a href="#tools" class="timeline-dot" data-section="tools" aria-label="Tools"></a>
+        <a href="#projects" class="timeline-dot" data-section="projects" aria-label="Projects"></a>
+        <a href="#contact" class="timeline-dot" data-section="contact" aria-label="Contact"></a>
+    </nav>
 
-        <!-- Featured Project -->
-        <div class="line">
-            <span class="prompt"><span class="user">guest</span><span class="at">@</span><span class="host">hussain-portfolio</span><span class="colon">:</span><span class="dir">~/projects</span><span class="symbol">$</span></span>
-            <span class="command">cat pemira_2024.md</span>
-        </div>
-        <div class="output">
-            <div class="project-box">
-                <h3>[#] Sistem E-Voting PEMIRA 2024</h3>
-                <p>Sistem backend yang aman dan andal untuk Pemilihan Raya Mahasiswa (PEMIRA) di 5 jurusan Politeknik Negeri Semarang.</p>
-                <p class="tech-stack">Tech: Laravel, PHP, MySQL</p>
-                <div class="tree-view">
-                    <p>Otentikasi Aman (JWT untuk validasi pemilih)</p>
-                    <p>Rekapitulasi Suara Presisi</p>
-                    <p>Status: <span class="success">DEPLOYED</span></p>
-                </div>
-                <br>
-                <p>Links: <a href="pemira-api.html" target="_blank">[API Docs]</a> | <a href="https://github.com/tatatacicici/pemira2024" target="_blank">[Source]</a></p>
-            </div>
-        </div>
-
-        <!-- Other Projects -->
-        <div class="line">
-            <span class="prompt"><span class="user">guest</span><span class="at">@</span><span class="host">hussain-portfolio</span><span class="colon">:</span><span class="dir">~/projects</span><span class="symbol">$</span></span>
-            <span class="command">ls -la</span>
-        </div>
-        <div class="output">
-            <div class="project-grid">
-                <div class="project-box">
-                    <h3>IoT: MQTT Inference System</h3>
-                    <p>Backend Go untuk streaming data sensor via MQTT, diproses model Python, disajikan ke WebSockets.</p>
-                    <p class="tech-stack">[Go, Python, MQTT]</p>
-                    <a href="https://github.com/tatatacicici/iot-mqtt-go" target="_blank">[View Source]</a>
-                </div>
-                <div class="project-box">
-                    <h3>Prediksi Stunting (ML)</h3>
-                    <p>Klasifikasi risiko stunting anak menggunakan Neural Network. Proyek akhir Coding Camp.</p>
-                    <p class="tech-stack">[TensorFlow, Python]</p>
-                    <a href="https://github.com/tatatacicici/codingcamp-submission" target="_blank">[View Source]</a>
-                </div>
-                <div class="project-box">
-                    <h3>Sistem Informasi Kependudukan</h3>
-                    <p>Platform Laravel untuk manajemen data penduduk tingkat RT/RW.</p>
-                    <p class="tech-stack">[Laravel, MySQL]</p>
-                    <a href="https://github.com/terminator791/pbl-sistem-penduduk" target="_blank">[View Source]</a>
-                </div>
-                <div class="project-box">
-                    <h3>Profil UKM PCC</h3>
-                    <p>Web statis profil Unit Kegiatan Mahasiswa Polytechnic Computer Club.</p>
-                    <p class="tech-stack">[HTML, CSS, JS]</p>
-                    <a href="https://tatatacicici.github.io/ukmpcc/" target="_blank">[Live Demo]</a>
-                </div>
-                <div class="project-box">
-                    <h3>Odoo Custom Modules</h3>
-                    <p>Kumpulan pengembangan dan modifikasi modul Odoo ERP tingkat lanjut.</p>
-                    <p class="tech-stack">[Odoo, Python]</p>
-                    <a href="https://github.com/tatatacicici/odoo-repo-porto" target="_blank">[View Source]</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tech Stack -->
-        <div class="line">
-            <span class="prompt"><span class="user">guest</span><span class="at">@</span><span class="host">hussain-portfolio</span><span class="colon">:</span><span class="dir">~</span><span class="symbol">$</span></span>
-            <span class="command">neofetch --tech-stack</span>
-        </div>
-        <div class="output">
-            <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
-                <pre class="ascii-art" style="color: var(--text-warning);">
-    ___      ___
-   /   \    /   \
-  |     |  |     |
-   \___/    \___/
-     |        |
-    / \      / \
-   /   \    /   \
-                </pre>
-                <div>
-                    <p><span class="highlight">OS:</span> Backend & API</p>
-                    <p><span class="highlight">Packages:</span> Go, Laravel/PHP, Python</p>
-                    <p><span class="highlight">Database:</span> PostgreSQL, MySQL</p>
-                    <p><span class="highlight">ML Core:</span> TensorFlow, Scikit-learn</p>
-                    <p><span class="highlight">Tools:</span> Git, Linux, Docker, Cloud</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Connect -->
-        <div class="line">
-            <span class="prompt"><span class="user">guest</span><span class="at">@</span><span class="host">hussain-portfolio</span><span class="colon">:</span><span class="dir">~</span><span class="symbol">$</span></span>
-            <span class="command">ping contact</span>
-        </div>
-        <div class="output">
-            <p>PING contact (127.0.0.1) 56(84) bytes of data.</p>
-            <p>64 bytes from <a href="https://github.com/tatatacicici" target="_blank">github.com/tatatacicici</a>: icmp_seq=1 ttl=64 time=10.2 ms</p>
-            <p>64 bytes from <a href="https://www.linkedin.com/in/hussain-tamam-gucci-al-fauzan/" target="_blank">linkedin.com/in/hussain-tamam-gucci-al-fauzan</a>: icmp_seq=2 ttl=64 time=12.1 ms</p>
-            <p>64 bytes from <a href="mailto:hussaintamamgucci@gmail.com">hussaintamamgucci@gmail.com</a>: icmp_seq=3 ttl=64 time=11.5 ms</p>
-        </div>
-
-        <!-- Blinking cursor at the end -->
-        <div class="line" style="margin-top: 40px;">
-            <span class="prompt"><span class="user">guest</span><span class="at">@</span><span class="host">hussain-portfolio</span><span class="colon">:</span><span class="dir">~</span><span class="symbol">$</span></span>
-            <span class="cursor"></span>
-        </div>
+    <!-- Mobile Menu -->
+    <button class="mobile-hamburger" id="mobileHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-overlay" id="mobileOverlay">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+        <nav class="mobile-nav">
+            <a href="#hero" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#tools" class="mobile-nav-link">Tools</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
     </div>
+
+    <!-- HERO -->
+    <section class="hero section" id="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-name">Hussain Tamam<br>Gucci Al Fauzan</h1>
+                <div class="hero-roles">
+                    <span class="hero-role">Backend Developer</span>
+                    <span class="hero-role-divider"></span>
+                    <span class="hero-role">Machine Learning Enthusiast</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-primary" id="btn-get-to-know">
+                        Get to know me
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1HlxLKtLSS21bbhPppKKFyuZxhDH6x1YQ/view?usp=drive_link" target="_blank" class="btn" id="btn-download-cv">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title fade-up">About Me</h2>
+            <div class="about-content fade-up delay-1">
+                <p>Saya mahasiswa Teknik Informatika di Politeknik Negeri Semarang. Fokus utama saya ada di backend engineering — mulai dari desain API, database, sampai deployment. Tujuannya sederhana: bikin sistem yang reliable dan gak bikin repot orang lain.</p>
+                <p>Selain backend, saya juga tertarik di machine learning. Sehari-hari pakai Go dan Laravel untuk API, TensorFlow untuk model ML, dan Docker + Linux buat infrastruktur. Kalau ada yang bisa di-automate, saya automate.</p>
+                <p>Saat ini sedang mengerjakan skripsi di bidang NLP — membangun sistem klasifikasi komentar toxic di YouTube menggunakan arsitektur IndoBERTweet + BiLSTM.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="section" id="tools">
+        <div class="container">
+            <h2 class="section-title fade-up">Tools</h2>
+            <div class="tools-carousel fade-up delay-1">
+                <button class="tools-nav tools-prev" id="toolsPrev" aria-label="Previous">&#8249;</button>
+                <div class="tools-viewport" id="toolsViewport">
+                    <div class="tools-track" id="toolsTrack">
+                        <div class="tool-slide">
+                            <div class="tool-slide-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <h4>Backend &amp; API</h4>
+                            <ul class="tool-list"><li>Go</li><li>Laravel / PHP</li><li>Python</li></ul>
+                        </div>
+                        <div class="tool-slide">
+                            <div class="tool-slide-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                            </div>
+                            <h4>Databases</h4>
+                            <ul class="tool-list"><li>PostgreSQL</li><li>MySQL</li></ul>
+                        </div>
+                        <div class="tool-slide">
+                            <div class="tool-slide-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.57-3.25 3.93"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.57 3.25 3.93"/><path d="M12 10v4"/><circle cx="12" cy="18" r="4"/><line x1="12" y1="16" x2="12" y2="20"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+                            </div>
+                            <h4>Machine Learning</h4>
+                            <ul class="tool-list"><li>TensorFlow</li><li>Scikit-learn</li></ul>
+                        </div>
+                        <div class="tool-slide">
+                            <div class="tool-slide-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
+                            <h4>Tools &amp; Infra</h4>
+                            <ul class="tool-list"><li>Git</li><li>Linux</li><li>Docker</li></ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="tools-nav tools-next" id="toolsNext" aria-label="Next">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-up">Projects</h2>
+
+            <!-- Featured Carousel -->
+            <div class="featured-project fade-up delay-1">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide">
+                            <img src="Img/pemira.svg" alt="PEMIRA E-Voting" class="carousel-image">
+                            <div class="carousel-info">
+                                <span class="carousel-badge">Deployed &middot; Production</span>
+                                <h3>Sistem E-Voting PEMIRA 2024</h3>
+                                <p>Backend e-voting yang handle pemilihan mahasiswa di 5 jurusan Polines. Fokus di keamanan voting dan real-time counting.</p>
+                                <div class="carousel-tech">
+                                    <span class="tech-tag">Laravel</span>
+                                    <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag">MySQL</span>
+                                </div>
+                                <div class="carousel-links">
+                                    <a href="pemira-api.html" class="btn btn-sm btn-primary">API Docs</a>
+                                    <a href="https://github.com/tatatacicici/pemira2024" target="_blank" class="btn btn-sm">Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="Img/capstone.png" alt="GrowSmart" class="carousel-image">
+                            <div class="carousel-info">
+                                <span class="carousel-badge">Capstone &middot; DBS Foundation</span>
+                                <h3>Prediksi Stunting</h3>
+                                <p>Neural network untuk klasifikasi risiko stunting anak. Capstone project Coding Camp powered by DBS Foundation.</p>
+                                <div class="carousel-tech">
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">Python</span>
+                                </div>
+                                <div class="carousel-links">
+                                    <a href="https://github.com/tatatacicici/codingcamp-submission" target="_blank" class="btn btn-sm">Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="Img/undraw_real-time-analytics_50za.svg" alt="IoT MQTT" class="carousel-image" style="object-fit:contain;background:#f5f5f7;padding:24px;">
+                            <div class="carousel-info">
+                                <span class="carousel-badge">IoT &middot; Real-time</span>
+                                <h3>MQTT Inference System</h3>
+                                <p>Backend Go yang stream data sensor via MQTT, proses pakai model Python, dan serve ke client lewat WebSockets.</p>
+                                <div class="carousel-tech">
+                                    <span class="tech-tag">Go</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">MQTT</span>
+                                </div>
+                                <div class="carousel-links">
+                                    <a href="https://github.com/tatatacicici/iot-mqtt-go" target="_blank" class="btn btn-sm">Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-nav carousel-prev" id="carouselPrev" aria-label="Previous">&#8249;</button>
+                    <button class="carousel-nav carousel-next" id="carouselNext" aria-label="Next">&#8250;</button>
+                </div>
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <button class="carousel-indicator active" data-slide="0" aria-label="Slide 1"></button>
+                    <button class="carousel-indicator" data-slide="1" aria-label="Slide 2"></button>
+                    <button class="carousel-indicator" data-slide="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="projects-grid">
+                <div class="project-card fade-up delay-1">
+                    <img src="Img/pbl.png" alt="Sistem Kependudukan" class="project-card-image">
+                    <div class="project-card-body">
+                        <h4>Sistem Informasi Kependudukan</h4>
+                        <p>Platform manajemen data penduduk tingkat RT/RW. Dashboard untuk data warga, kesehatan, pendidikan.</p>
+                        <div class="project-card-footer">
+                            <div class="project-card-tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <a href="https://github.com/terminator791/pbl-sistem-penduduk" target="_blank" class="btn btn-sm">Source</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-up delay-2">
+                    <img src="Img/pcc-ukm.png" alt="Odoo Modules" class="project-card-image">
+                    <div class="project-card-body">
+                        <h4>Odoo Custom Modules</h4>
+                        <p>Modifikasi dan pengembangan modul ERP Odoo untuk kebutuhan organisasi kampus.</p>
+                        <div class="project-card-footer">
+                            <div class="project-card-tech">
+                                <span class="tech-tag">Odoo</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <a href="https://github.com/tatatacicici/odoo-repo-porto" target="_blank" class="btn btn-sm">Source</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-up delay-1">
+                    <img src="Img/capstone.png" alt="Coding Camp" class="project-card-image">
+                    <div class="project-card-body">
+                        <h4>Coding Camp — DBS Foundation</h4>
+                        <p>Capstone ML project dari program Coding Camp. Fokus di data preprocessing dan model training.</p>
+                        <div class="project-card-footer">
+                            <div class="project-card-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                            </div>
+                            <a href="https://github.com/tatatacicici/codingcamp-submission" target="_blank" class="btn btn-sm">Source</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-up delay-2">
+                    <img src="Img/program-dbs-bg.jpg" alt="SiPenduduk API" class="project-card-image">
+                    <div class="project-card-body">
+                        <h4>SiPenduduk — API Docs</h4>
+                        <p>Dokumentasi REST API untuk Sistem Informasi Kependudukan.</p>
+                        <div class="project-card-footer">
+                            <div class="project-card-tech">
+                                <span class="tech-tag">REST</span>
+                                <span class="tech-tag">Laravel</span>
+                            </div>
+                            <a href="sipenduduk-api.html" class="btn btn-sm">API Docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-up">Contact</h2>
+            <div class="contact-grid fade-up delay-1">
+                <div class="contact-text">
+                    <p>Ada project yang perlu dikerjakan bareng, atau cuma mau ngobrol soal tech? Reach out — saya cukup responsive di email.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:hussaintamamgucci@gmail.com" class="contact-link" id="contact-email-link">
+                        <div class="contact-link-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <strong>Email</strong>
+                            hussaintamamgucci@gmail.com
+                        </div>
+                    </a>
+                    <a href="https://github.com/tatatacicici" target="_blank" class="contact-link" id="contact-github-link">
+                        <div class="contact-link-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <strong>GitHub</strong>
+                            github.com/tatatacicici
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1HlxLKtLSS21bbhPppKKFyuZxhDH6x1YQ/view?usp=drive_link" target="_blank" class="contact-link" id="contact-cv-link">
+                        <div class="contact-link-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <strong>Resume / CV</strong>
+                            Download PDF
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">&copy; 2024 Hussain Tamam</div>
+                <div class="footer-socials">
+                    <a href="https://github.com/tatatacicici" target="_blank" class="social-link" aria-label="GitHub">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="mailto:hussaintamamgucci@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const hamburger = document.getElementById('mobileHamburger');
+        const overlay = document.getElementById('mobileOverlay');
+        const closeBtn = document.getElementById('mobileClose');
+        hamburger.addEventListener('click', () => overlay.classList.add('open'));
+        closeBtn.addEventListener('click', () => overlay.classList.remove('open'));
+        document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', () => overlay.classList.remove('open')));
+
+        // Tools coverflow
+        const toolSlides = document.querySelectorAll('.tool-slide');
+        let toolIndex = 0;
+        function updateTools() {
+            toolSlides.forEach((s, i) => {
+                s.classList.remove('active','prev','next','far-prev','far-next');
+                const d = i - toolIndex;
+                if (d === 0) s.classList.add('active');
+                else if (d === -1 || (toolIndex === 0 && i === toolSlides.length-1)) s.classList.add('prev');
+                else if (d === 1 || (toolIndex === toolSlides.length-1 && i === 0)) s.classList.add('next');
+                else if (d < -1) s.classList.add('far-prev');
+                else s.classList.add('far-next');
+            });
+        }
+        updateTools();
+        document.getElementById('toolsPrev').addEventListener('click', () => { toolIndex = (toolIndex-1+toolSlides.length) % toolSlides.length; updateTools(); });
+        document.getElementById('toolsNext').addEventListener('click', () => { toolIndex = (toolIndex+1) % toolSlides.length; updateTools(); });
+        // Tools auto-slide
+        let toolAuto = setInterval(() => { toolIndex = (toolIndex+1) % toolSlides.length; updateTools(); }, 3000);
+        document.querySelector('.tools-carousel').addEventListener('mouseenter', () => clearInterval(toolAuto));
+        document.querySelector('.tools-carousel').addEventListener('mouseleave', () => { toolAuto = setInterval(() => { toolIndex = (toolIndex+1) % toolSlides.length; updateTools(); }, 3000); });
+
+        // Project carousel
+        const track = document.getElementById('carouselTrack');
+        const slides = track.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        let cur = 0;
+        function goTo(i) {
+            cur = (i+slides.length) % slides.length;
+            track.style.transform = `translateX(-${cur*100}%)`;
+            indicators.forEach((ind,j) => ind.classList.toggle('active', j===cur));
+        }
+        document.getElementById('carouselPrev').addEventListener('click', () => goTo(cur-1));
+        document.getElementById('carouselNext').addEventListener('click', () => goTo(cur+1));
+        indicators.forEach(ind => ind.addEventListener('click', () => goTo(+ind.dataset.slide)));
+        let auto = setInterval(() => goTo(cur+1), 6000);
+        document.getElementById('carouselWrapper').addEventListener('mouseenter', () => clearInterval(auto));
+        document.getElementById('carouselWrapper').addEventListener('mouseleave', () => { auto = setInterval(() => goTo(cur+1), 6000); });
+
+        // Scroll animations
+        const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), {threshold: 0.1});
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // Timeline dots
+        const dots = document.querySelectorAll('.timeline-dot');
+        const secObs = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) dots.forEach(d => d.classList.toggle('active', d.dataset.section === e.target.id));
+        }), {threshold: 0.3});
+        document.querySelectorAll('.section').forEach(s => secObs.observe(s));
+    </script>
 </body>
 </html>
